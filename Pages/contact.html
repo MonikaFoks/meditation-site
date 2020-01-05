@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0"/>
+        <meta http-equipv="X-UA-Compatible" content="ie-edge"/>
+        <link rel="stylesheet" href="../master.css" />
+        <title>Meditation App</title>
+    </head>
+    <body>
+        <! Header zawierający linki do stron Meditation, About me i Contact ->
+        <header>
+            <nav>
+                <ul class = "menu">
+                    <li><a href="../index.html">Meditation</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <! Klasa zawierająca wideo w tle ->
+        <div class="vid-container">
+            <video loop>
+                <source src="../Video/videoplayback.mp4" type="video/mp4"/>
+            </video> 
+        </div>
+        <! Klasa z formularzem kontaktowym ->
+        <div class="about-contact">
+            <header>Contact</header>
+            <form id="contact-form" method="post" action="">
+                <input name = "name" type="text" class="form-control" placeholder="Your Name" required><br>
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+                <textarea name="message" class="form-control" placeholder="Message" rows="4" required  ></textarea><br>
+                <input type="submit" class="form-control-submit" value="SEND MESSAGE">
+            </form>
+        </div>
+        <script src="../app.js"></script>
+    </body>
+</html>
