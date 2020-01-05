@@ -1,0 +1,184 @@
+/*Zaimportowane czcionki*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+body{
+    font-family: 'Nunito';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylowanie menu z linkami */
+.menu{
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(25, 47, 58);
+}
+
+li{
+    display: inline-block;
+    margin-right: 40px; 
+}
+
+/* Stylowanie podstron About me i Contact */
+.about-contact header{
+    font-family: 'Pacifico', cursive;
+    padding: 50px;
+    text-align: center;
+    color: rgb(25, 47, 58);
+    font-size: 35px;
+}
+
+.about-contact h2{
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.about-contact img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.about-contact form{
+    text-align: center;
+}
+
+/* Stylowanie formularza kontaktowego */
+.form-control{
+    font-family: 'Nunito';
+    width: 500px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.form-control-submit{
+    color: lightsteelblue;
+    width: 20%;
+    height: 10%;
+    background: rgb(25, 47, 58);
+    border: 2px solid rgb(25, 47, 58);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.form-control-submit:hover{
+    color: rgb(25, 47, 58);
+    background: lightsteelblue;
+}
+
+/* Stylowanie klasy aplikacji */
+.app {
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Stylowanie nagłówka klasy .player-container z odliczaniem czasu do medytacji */
+.player-header{
+    color: rgb(25, 47, 58);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+}
+
+.time-select, 
+.sound-picker,
+.player-container{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player-container{
+    position: relative;
+}
+
+/* Przeniesienie .moving-outline na sam wierzch, aby było je widać */
+.moving-outline{
+    z-index: 10;
+}
+
+.moving-outline,
+.track-outline{
+    height: 60%;
+}
+
+/* Przeniesienie przycisku play na samą górę, aby możliwa była interakcja z nim */
+.play{
+    display: block;
+    margin: auto;
+    z-index: 20;
+}
+
+.player-container svg{
+    position: absolute;
+    transform: translate();
+}
+
+/* Stylowanie wyświetlania czasu medytacji */
+.time-display{
+    position: absolute;
+    bottom: 0%;
+    color: rgb(25, 47, 58);
+    font-size: 40px;
+}
+
+/* Ustawienie video na cały ekran i za wszystkimi elementami */
+video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+}
+
+/* Stylowanie przycisków */
+.time-select button,
+.sound-picker button{
+    color: lightsteelblue;
+    width: 20%;
+    height: 7%;
+    background: rgb(25, 47, 58);
+    border: 2px solid rgb(25, 47, 58);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+/* Stylowanie reakcji przycisków na najechanie na nie */
+.time-select button:hover,
+.sound-picker button:hover{
+    color: rgb(25, 47, 58);
+    background: lightsteelblue;
+}
+
+/* Stylowanie tekstu nad przyciskami  */
+.time-select header,
+.sound-picker header{
+    font-family: 'Pacifico', cursive;
+    color: rgb(25, 47, 58);
+    font-size: 30px;
+    font-weight: bold;
+}
